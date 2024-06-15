@@ -69,136 +69,189 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Additional Commands
+## Additional Commands
 
-Modify terminal
+### Modify terminal
+
 (nano == open)
 
-- sudo nano zshrc
-- sudo nano bashrc
+    sudo nano zshrc
+    sudo nano bashrc
 
-Find /etc folder
+## Find /etc folder
 
-- open /etc
-- cd /etc
+    open /etc
+    cd /etc
 
-Install
+## Install
 
-- brew
-- nodejs (executing JS code)
-  node -v
-- npm
-  sudo npm install -g npm@latest
-  also use to upgrade
-  install all packages in package.json
+1.  brew
+2.  nodejs (executing JS code)
 
-  sudo n stable
-  npm -v
+    - Check the version
 
-- yarn
-  sudo npm install add --global yarn
-  sudo npm upgrade --global yarn
-- git
-  brew install git
-  brew upgrade git
+            node -v
 
-  Config
-  git config --global user.name “<github username>”
-  git config --global user.email <github email>
+    - also use to upgrade and to install all packages in package.json
 
-- GitHub CLI
-  brew install gh
-  brew upgrade gh
+            npm sudo npm install -g npm@latest
 
-      Authenticate Github account
+            sudo n stable
 
-  gh auth login
-  gh auth status
+    - Check the version
 
-      Check repo list
-      		gh repo list
+            npm -v
 
-  ============================================================
-  bootstrap
+3.  yarn
 
-- npm install bootstrap@5.3.3
+        sudo npm install add --global yarn
+        sudo npm upgrade --global yarn
 
-vue with new folder
+4.  git
 
-- npm create vite@latest reactdemo -- --template react
-  — no need to run this if the project already have vite
+        brew install git
+        brew upgrade git
 
-Run app
+## Config Gitbhub
 
-- # npm run dev
-  Create yarn react app and new repo in Github
-  Go to target local root folder
-  yarn create react-app <project folder name>
-  also initializes git (git init)
-  yarn discourages using global packages
-  Go to created new folder
-  yarn
-  to install yarn
-  yarn upgrade
-  yarn start
-  to run project
-  Ctrl + C - close session terminal
-  code .
-  to open in VS codeclear
-  open VS code terminal
-  gh repo list
-  gh repo create  
-   create remote to git hub as an option
+        git config --global user.name “<github username>”
+        git config --global user.email <github email>
 
-Published existing local repo to Github
+## GitHub CLI
+
+        brew install gh
+        brew upgrade gh
+
+## Authenticate Github account
+
+        gh auth login
+        gh auth status
+
+## Check repo list
+
+        gh repo list
+
+## Install bootstrap
+
+        npm install bootstrap@5.3.3
+
+## Install vue with new folder
+
+        npm create vite@latest <Project Name> -- --template react
+
+- no need to run this if the project already have vite
+
+## Run app using npm
+
+    npm run dev
+
+## Create yarn react app and new repo in Github
+
+1.  Go to target local root folder
+
+    - also initializes git (git init)
+    - yarn discourages using global packages
+
+            yarn create react-app <project folder name>
+
+2.  Go to created new folder
+
+    - to install yarn
+
+          yarn
+
+    - to upgrade yarn version
+
+          yarn upgrade
+
+    - to run project
+
+          yarn start
+
+## Close Session Terminal
+
+    Ctrl + C
+
+## To open Code in Visual Studio
+
+    code .
+
+## Check the Remote Repository List
+
+    gh repo list
+
+## Create Remote Repository to an Existing Local Repository
+
 Go to target local root folder
-gh repo create
-Push an existing local repository to Github
-git add . (For all files)
-git commit -m “<commit message>”
-git status
-git remote -v
-git push -u origin master
 
-\*\*\* git init (in the target folder) - for app created in react, this is automatically initialized
+        gh repo create
+        (Push an existing local repository to Github)
 
-Other Git commands
-git clone <repo url>
+## Published existing local repo to Github
+
+Go to target local root folder
+
+    git status
+
+    git add . (For all files)
+
+    git commit -m “<commit message>”
+
+    git status
+
+    git remote -v
+
+    git push -u origin master
+
+### git init (in the target folder) - for app created in react, this is automatically initialized
+
+## Other Git commands
+
+    git clone <repo url>
 
     git checkout -b <new branch name>
+
     git push origin master - to get the latest code version
 
     git add .  (For all files)
     git add <name of file> (individual files)
 
     git commit -m “<commit message>”
+
     git status (to check modified files)
 
     git remote -v
 
-to confirm remote has been added
+## To confirm remote has been added
 
     git remote add origin https://github.com/jenniferdevega/<new repo name>.git
 
     git push -u origin master
 
-To update current local repo
-git pull origin master or main
-git remote update origin -- prune
-git branch -a
+## To update current local repo
 
-To setup auto upstream(so not to use the git push -u origin master)
-git config --global push.autoSetupRemote true
-git push
+    git pull origin master or main
 
-Yarn commands
-yarn test
-yarn build
+    git remote update origin -- prune
 
-API Calls
+    git branch -a
+
+## To setup auto upstream(so not to use the git push -u origin master)
+
+    git config --global push.autoSetupRemote true
+
+    git push
+
+## Yarn commands
+
+    yarn test
+    yarn build
+
+## API Calls
+
 Axois - common library for making API calls
-npm install axios
-yarn add axios
 
-curl -u "jenniferdevega_yV78hL:csphZQZzc7nzTKjfTjzk" \ -X GET "https://www.browserstack.com/user/ip_access_list"
-1
+    npm install axios
+    yarn add axios
+
+    curl -u "jenniferdevega_yV78hL:csphZQZzc7nzTKjfTjzk" \ -X GET "https://www.browserstack.com/user/ip_access_list"
